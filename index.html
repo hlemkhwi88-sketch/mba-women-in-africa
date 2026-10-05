@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="MBA Women in Africa is a pan-African professional community for women earning or holding an MBA, across Africa and the diaspora: mentorship, community, events and opportunities.">
+<title>MBA Women in Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: warm beige "silk" grounds with frosted white cards and thin champagne rules; serif italic display, airy sans body; tabbed views for each audience need */
+:root {
+  --ivory: #fcf8f4;        /* page ground */
+  --sand: #f1e6da;         /* warm beige band */
+  --blush: #f4dcd5;        /* blush pastel */
+  --peach: #f7e2cf;        /* peach pastel */
+  --rose: #b97f78;         /* dusty rose accent */
+  --rose-deep: #9a625c;    /* accent for text on light grounds */
+  --champagne: #c8a97e;    /* thin rules, small marks */
+  --cocoa: #3a2b2a;        /* text, never pure black */
+  --cocoa-soft: #6e5c58;   /* secondary text */
+  --card: rgba(255, 255, 255, .72);
+  --card-solid: #ffffff;
+  --line: rgba(58, 43, 42, .12);
+  --serif: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --sans: "Jost", "Futura", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--ivory); color: var(--cocoa); font-family: var(--sans); font-weight: 300; font-size: 1.0625rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; color: var(--cocoa); }
+h1 em, h2 em, h3 em { font-style: italic; color: var(--rose-deep); }
+p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; border-radius: 2px; }
+
+.wrap { max-width: 1240px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 48px); }
+.eyebrow { font-family: var(--sans); font-size: .72rem; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--rose-deep); }
+.rule { display: block; width: 64px; height: 1px; background: var(--champagne); }
+.lede { font-size: clamp(1.1rem, 1.6vw, 1.3rem); color: var(--cocoa-soft); max-width: 58ch; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 30px; font-family: var(--sans); font-size: .78rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--cocoa); color: var(--cocoa); background: transparent; cursor: pointer; transition: background .35s ease, color .35s ease, gap .35s ease; }
+.btn:hover { background: var(--cocoa); color: var(--ivory); gap: 18px; }
+.btn.solid { background: var(--cocoa); color: var(--ivory); }
+.btn.solid:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+.btn .arr { font-family: var(--serif); font-size: 1.1rem; letter-spacing: 0; line-height: 1; }
+.link { font-size: .78rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--champagne); padding-bottom: 4px; transition: color .3s, border-color .3s; }
+.link:hover { color: var(--rose-deep); border-color: var(--rose-deep); }
+
+/* Header */
+.topbar { background: var(--cocoa); color: var(--blush); text-align: center; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; padding: 10px 16px; }
+.topbar a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid rgba(252,248,244,.4); }
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(252, 248, 244, .88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 18px; }
+.logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+.logo .l1 { white-space: nowrap; font-family: var(--serif); font-size: 1.7rem; font-style: italic; letter-spacing: .01em; }
+.logo .l2 { font-size: .6rem; font-weight: 500; letter-spacing: .42em; text-transform: uppercase; color: var(--rose-deep); margin-top: 6px; }
+nav.main ul { display: flex; gap: clamp(14px, 2vw, 30px); list-style: none; margin: 0; padding: 0; }
+nav.main a { white-space: nowrap; font-size: .74rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; color: var(--cocoa-soft); padding-block: 6px; border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; }
+nav.main a:hover, nav.main a[aria-current="page"] { color: var(--cocoa); border-color: var(--rose); }
+.head-cta { display: flex; align-items: center; gap: 14px; }
+.head-cta .btn { padding: 12px 22px; }
+.menu-btn { display: none; background: none; border: 0; padding: 8px; cursor: pointer; color: var(--cocoa); }
+.menu-btn span { display: block; width: 24px; height: 1px; background: currentColor; margin: 6px 0; transition: transform .3s; }
+
+/* Views */
+.view[hidden] { display: none !important; }
+.view { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes rise { from { opacity: .001; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Silk ground */
+.silk { position: relative; overflow: hidden; background: var(--sand); }
+.silk canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.silk > .wrap { position: relative; z-index: 1; }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(56px, 9vw, 120px); }
+.glass { background: var(--card); backdrop-filter: blur(18px) saturate(1.1); -webkit-backdrop-filter: blur(18px) saturate(1.1); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 30px 80px -40px rgba(122, 78, 70, .35); outline: 1px solid rgba(200,169,126,.35); outline-offset: -12px; }
+.hero-card { padding: clamp(32px, 5vw, 64px); display: grid; gap: 26px; }
+.hero h1 { font-size: clamp(3rem, 7.2vw, 6.4rem); letter-spacing: -.01em; }
+.hero h1 .i { font-style: italic; color: var(--rose-deep); display: block; }
+.hero .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+
+.arches { position: relative; aspect-ratio: 4 / 5; max-width: 100%; }
+.arch { position: absolute; border-radius: 999px 999px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.85); }
+.arch canvas { width: 100%; height: 100%; display: block; }
+.arch.a1 { inset: 0 22% 8% 0; }
+.arch.a2 { inset: 30% 0 0 46%; box-shadow: 0 24px 60px -30px rgba(122,78,70,.45); }
+.arch-tag { position: absolute; left: 6%; bottom: 14%; z-index: 2; padding: 16px 20px; display: grid; gap: 2px; min-width: 0; max-width: 62%; }
+.arch-tag b { font-family: var(--serif); font-weight: 400; font-size: 2.4rem; line-height: 1; font-variant-numeric: lining-nums; }
+.arch-tag span { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--cocoa-soft); }
+
+/* Marquee */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; background: var(--ivory); }
+.marquee-track { display: flex; gap: 48px; width: max-content; padding-block: 20px; animation: slide 38s linear infinite; }
+.marquee-track span { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--cocoa-soft); white-space: nowrap; display: inline-flex; align-items: center; gap: 48px; }
+.marquee-track span::after { content: ""; width: 6px; height: 6px; background: var(--champagne); transform: rotate(45deg); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* Sections */
+.sec { padding-block: clamp(72px, 10vw, 136px); }
+.sec-head { display: grid; gap: 18px; margin-bottom: clamp(40px, 6vw, 72px); max-width: 760px; }
+.sec-head h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); }
+.sec-head.center { margin-inline: auto; text-align: center; justify-items: center; }
+
+/* Numbers */
+.numbers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.num { padding: 36px 24px 8px 0; display: grid; gap: 10px; border-right: 1px solid var(--line); min-width: 0; }
+.num + .num { padding-left: 24px; }
+.num:last-child { border-right: 0; }
+.num b { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 5vw, 4.4rem); line-height: .9; font-variant-numeric: lining-nums tabular-nums; }
+.num span { font-size: .85rem; color: var(--cocoa-soft); }
+
+/* Audience */
+.aud { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.aud-card { position: relative; padding: 40px 34px 36px; background: var(--card-solid); border: 1px solid var(--line); display: grid; gap: 16px; align-content: start; min-width: 0; transition: transform .4s ease, box-shadow .4s ease; }
+.aud-card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -40px rgba(122,78,70,.45); }
+.aud-card .swatch { height: 150px; margin: -40px -34px 10px; position: relative; overflow: hidden; }
+.aud-card .swatch canvas { width: 100%; height: 100%; display: block; }
+.aud-card .swatch i { position: absolute; left: 30px; bottom: 18px; font-family: var(--serif); font-size: 1.05rem; color: var(--cocoa); background: rgba(255,255,255,.7); padding: 4px 12px; }
+.aud-card h3 { font-size: 2rem; }
+.aud-card p { color: var(--cocoa-soft); }
+.aud-card ul { list-style: none; padding: 0; margin: 4px 0 8px; display: grid; gap: 8px; font-size: .95rem; }
+.aud-card li { display: flex; gap: 12px; align-items: baseline; }
+.aud-card li::before { content: ""; flex: none; width: 14px; height: 1px; background: var(--rose); transform: translateY(-4px); }
+
+/* Pillars */
+.pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.pillar { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; padding: 40px 32px 40px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.pillar:nth-child(even) { padding: 40px 0 40px 32px; border-left: 1px solid var(--line); }
+.pillar .ico { width: 54px; height: 54px; border-radius: 50%; background: var(--blush); display: grid; place-items: center; }
+.pillar .ico svg { width: 24px; height: 24px; stroke: var(--rose-deep); fill: none; stroke-width: 1.3; }
+.pillar h3 { font-size: 1.9rem; margin-bottom: 10px; }
+.pillar p { color: var(--cocoa-soft); }
+
+/* Feature split */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.quote { font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 3.8vw, 3.2rem); line-height: 1.12; text-wrap: balance; }
+.quote-by { margin-top: 26px; font-size: .75rem; letter-spacing: .24em; text-transform: uppercase; color: var(--cocoa-soft); }
+
+/* Event cards */
+.events { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.ev { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: clamp(16px, 3vw, 48px); align-items: center; padding: 34px 0; border-bottom: 1px solid var(--line); transition: padding .35s ease, background .35s ease; }
+.ev:hover { background: rgba(244, 220, 213, .35); padding-inline: 20px; }
+.ev .date { font-family: var(--serif); line-height: 1; }
+.ev .date b { display: block; font-weight: 400; font-size: 3rem; font-variant-numeric: lining-nums; }
+.ev .date span { font-family: var(--sans); font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--cocoa-soft); }
+.ev .kind { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--rose-deep); font-weight: 500; }
+.ev h3 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin-top: 6px; }
+.ev p { color: var(--cocoa-soft); margin-top: 6px; max-width: 62ch; }
+.pill { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; padding: 8px 14px; border: 1px solid var(--line); white-space: nowrap; color: var(--cocoa-soft); }
+
+/* Tiers */
+.tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); align-items: stretch; }
+.tier { padding: 44px 36px; background: var(--card-solid); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 18px; position: relative; min-width: 0; }
+.tier.feature { background: var(--cocoa); color: var(--ivory); border-color: var(--cocoa); }
+.tier.feature h3, .tier.feature .price b { color: var(--ivory); }
+.tier.feature p, .tier.feature li, .tier.feature .price span { color: #e6d5cf; }
+.tier.feature .eyebrow { color: var(--blush); }
+.tier.feature li::before { background: var(--blush); }
+.tier.feature .btn { border-color: var(--blush); color: var(--cocoa); background: var(--blush); }
+.tier.feature .btn:hover { background: var(--ivory); border-color: var(--ivory); }
+.tier .flag { position: absolute; top: 0; right: 28px; transform: translateY(-50%); background: var(--blush); color: var(--cocoa); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; padding: 8px 14px; font-weight: 500; }
+.tier h3 { font-size: 2.3rem; }
+.price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.price b { font-family: var(--serif); font-weight: 400; font-size: 3rem; line-height: 1; font-variant-numeric: lining-nums; }
+.price span { font-size: .85rem; color: var(--cocoa-soft); }
+.tier p { color: var(--cocoa-soft); }
+.tier ul { list-style: none; padding: 18px 0 0; margin: 0; border-top: 1px solid var(--line); display: grid; gap: 11px; font-size: .95rem; flex: 1; }
+.tier.feature ul { border-color: rgba(252,248,244,.2); }
+.tier li { display: flex; gap: 12px; align-items: baseline; }
+.tier li::before { content: ""; flex: none; width: 14px; height: 1px; background: var(--rose); transform: translateY(-4px); }
+.tier .btn { justify-content: center; margin-top: 10px; }
+
+/* Steps (a real sequence) */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 36px); counter-reset: s; }
+.step { display: grid; gap: 12px; padding-top: 24px; border-top: 1px solid var(--cocoa); min-width: 0; }
+.step::before { counter-increment: s; content: "0" counter(s); font-family: var(--serif); font-style: italic; font-size: 2.2rem; color: var(--rose-deep); line-height: 1; }
+.step h4 { font-size: 1.5rem; }
+.step p { color: var(--cocoa-soft); font-size: .97rem; }
+
+/* Founder */
+.founder-card { padding: clamp(32px, 5vw, 60px); display: grid; gap: 20px; }
+.monogram { width: 100%; aspect-ratio: 4/5; position: relative; }
+.monogram .arch { inset: 0; }
+.monogram .initials { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--serif); font-style: italic; font-size: clamp(5rem, 12vw, 9rem); color: rgba(255,255,255,.92); z-index: 2; pointer-events: none; }
+.creds { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.creds li { font-size: .78rem; letter-spacing: .04em; padding: 8px 14px; border: 1px solid var(--line); background: rgba(255,255,255,.6); }
+
+/* Values */
+.values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
+.value { display: grid; gap: 12px; }
+.value h3 { font-size: 2rem; font-style: italic; }
+.value p { color: var(--cocoa-soft); }
+
+/* Podcast */
+.pods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.pod { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; padding: 28px; background: var(--card-solid); border: 1px solid var(--line); align-items: center; }
+.pod .cover { aspect-ratio: 1; position: relative; overflow: hidden; }
+.pod .cover canvas { width: 100%; height: 100%; display: block; }
+.pod .cover span { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 10px; font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.1; color: var(--cocoa); }
+.pod h3 { font-size: 1.8rem; margin: 6px 0 8px; }
+.pod p { color: var(--cocoa-soft); font-size: .97rem; }
+
+/* Partner */
+.placements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.placement { padding: 32px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; gap: 10px; align-content: start; background: rgba(255,255,255,.5); transition: background .3s; min-width: 0; }
+.placement:hover { background: var(--card-solid); }
+.placement h4 { font-size: 1.6rem; }
+.placement p { color: var(--cocoa-soft); font-size: .95rem; }
+
+/* CTA band */
+.cta-band .wrap { padding-block: clamp(72px, 10vw, 128px); display: grid; place-items: center; }
+.cta-card { padding: clamp(36px, 6vw, 80px); text-align: center; display: grid; gap: 22px; justify-items: center; max-width: 820px; }
+.cta-card h2 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); }
+
+/* Newsletter */
+.news { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 80px); align-items: end; }
+.news h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+
+/* Footer */
+footer.site { background: var(--cocoa); color: #e6d5cf; padding-block: 72px 40px; }
+footer.site .grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 40px; }
+footer.site .logo .l1 { color: var(--ivory); font-size: 2.2rem; }
+footer.site .logo .l2 { color: var(--blush); }
+footer.site h5 { font-family: var(--sans); font-size: .7rem; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: var(--blush); margin: 0 0 16px; }
+footer.site ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+footer.site a { text-decoration: none; color: #e6d5cf; font-size: .95rem; }
+footer.site a:hover { color: var(--ivory); }
+footer.site .base { margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(252,248,244,.15); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .8rem; color: #bfa9a3; }
+footer.site p { color: #d6c3bd; max-width: 38ch; margin-top: 18px; }
+
+
+/* Slack channels */
+.channels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.channel { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; padding: 28px 28px 28px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.channel:nth-child(even) { padding: 28px 0 28px 28px; border-left: 1px solid var(--line); }
+.channel .hash { width: 44px; height: 44px; display: grid; place-items: center; background: var(--blush); font-family: var(--serif); font-size: 1.6rem; color: var(--rose-deep); }
+.channel h4 { font-family: var(--sans); font-size: 1.02rem; font-weight: 500; letter-spacing: .01em; }
+.channel p { color: var(--cocoa-soft); font-size: .95rem; margin-top: 4px; }
+.agree { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; color: var(--cocoa-soft); }
+.agree li { padding-left: 26px; position: relative; }
+.agree li::before { content: ""; position: absolute; left: 0; top: .8em; width: 14px; height: 1px; background: var(--rose); }
+.agree b { color: var(--cocoa); font-weight: 500; }
+@media (max-width: 900px) { .channels { grid-template-columns: minmax(0, 1fr); } .channel, .channel:nth-child(even) { padding: 24px 0; border-left: 0; } }
+
+/* Responsive */
+@media (max-width: 1240px) {
+  nav.main { position: absolute; left: 0; right: 0; top: 100%; background: var(--ivory); padding: 20px clamp(16px, 4vw, 48px) 32px; border-bottom: 1px solid var(--line); box-shadow: 0 30px 50px -30px rgba(122,78,70,.35); display: none; }
+  nav.main.open { display: block; animation: rise .4s ease both; }
+  nav.main ul { flex-direction: column; gap: 4px; }
+  nav.main a { font-family: var(--serif); font-size: 2rem; letter-spacing: 0; text-transform: none; font-weight: 400; color: var(--cocoa); display: block; padding-block: 8px; }
+  .menu-btn { display: block; }
+  .menu-btn[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+}
+@media (max-width: 900px) {
+  .hero .wrap, .split, .news { grid-template-columns: minmax(0, 1fr); }
+  .arches { max-width: 460px; width: 100%; margin-inline: auto; }
+  .aud, .tiers, .values, .placements { grid-template-columns: minmax(0, 1fr); }
+  .tier .flag { right: 20px; }
+  .numbers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .num:nth-child(2) { border-right: 0; }
+  .num:nth-child(3) { padding-left: 0; }
+  .num { padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .pillars, .pods { grid-template-columns: minmax(0, 1fr); }
+  .pillar, .pillar:nth-child(even) { padding: 32px 0; border-left: 0; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ev { grid-template-columns: 90px minmax(0, 1fr); }
+  .ev .pill { grid-column: 2; justify-self: start; }
+  footer.site .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  footer.site .grid > :first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .head-cta .btn { display: none; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .pod { grid-template-columns: minmax(0, 1fr); }
+  .pod .cover { max-width: 180px; }
+  .ev { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .ev .pill { grid-column: auto; }
+  .ev .date b { font-size: 2.2rem; display: inline; margin-right: 8px; }
+  .arch-tag b { font-size: 1.8rem; }
+  .topbar { letter-spacing: .14em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view, .marquee-track { animation: none; }
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body style="margin:0">
+
+
+<div class="topbar">Applications are open for founding members · <a href="#membership">See membership</a></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="MBA Women in Africa, home">
+      <span class="l1">MBA Women in Africa</span>
+      <span class="l2">Learn · Lead · Invest</span>
+    </a>
+    <nav class="main" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#mentorship">Mentorship</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#spotlight">Stories</a></li>
+        <li><a href="#partner">Partner</a></li>
+      </ul>
+    </nav>
+    <div class="head-cta">
+      <a class="btn solid" href="#apply">Apply <span class="arr">→</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<section class="view" data-view="home">
+  <div class="silk hero">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="glass hero-card">
+        <p class="eyebrow">A pan-African community · Est. 2025</p>
+        <h1>From the boardroom <span class="i">to the portfolio.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">The professional home for women who are earning, or have earned, their MBA in Africa and the diaspora. We turn the degree into sponsorship, capital, board seats and a sisterhood that opens doors.</p>
+        <div class="cta-row">
+          <a class="btn solid" href="#apply">Apply for membership <span class="arr">→</span></a>
+          <a class="btn" href="#about">Our story</a>
+        </div>
+      </div>
+      <div class="arches" aria-hidden="true">
+        <div class="arch a1"><canvas class="silk-canvas" data-palette="blush"></canvas></div>
+        <div class="arch a2"><canvas class="silk-canvas" data-palette="peach"></canvas></div>
+        <div class="glass arch-tag"><b>1,200+</b><span>women, one network</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Mentorship</span><span>Capital Conversations</span><span>Member Spotlight</span><span>Board readiness</span><span>Wealth &amp; investing</span><span>Live masterclasses</span><span>East · West · Southern Africa · Diaspora</span>
+      <span>Mentorship</span><span>Capital Conversations</span><span>Member Spotlight</span><span>Board readiness</span><span>Wealth &amp; investing</span><span>Live masterclasses</span><span>East · West · Southern Africa · Diaspora</span>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="numbers">
+        <div class="num"><b>1,200+</b><span>members in the community</span></div>
+        <div class="num"><b>15+</b><span>countries across Africa and the diaspora</span></div>
+        <div class="num"><b>2</b><span>podcast conversations recorded for Africa Month</span></div>
+        <div class="num"><b>2025</b><span>the year we began</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who we are for</p>
+        <h2>Wherever you are in your <em>MBA journey</em>, there is a seat for you.</h2>
+      </div>
+      <div class="aud">
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="blush"></canvas><i>The candidate</i></div>
+          <h3>Still in the classroom</h3>
+          <p>You are juggling assignments, a career and a family, and you want women who have done it beside you.</p>
+          <ul>
+            <li>Peer circles across business schools</li>
+            <li>Study, case and dissertation support</li>
+            <li>The real cost of an MBA, discussed openly</li>
+          </ul>
+          <a class="link" href="#membership">Membership for candidates</a>
+        </article>
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="peach"></canvas><i>The graduate</i></div>
+          <h3>Degree in hand</h3>
+          <p>You have the qualification. Now you want the promotion, the pivot or the business it was meant to unlock.</p>
+          <ul>
+            <li>Mentors a few steps ahead</li>
+            <li>Board, speaking and job opportunities</li>
+            <li>Wealth and investing masterclasses</li>
+          </ul>
+          <a class="link" href="#membership">Membership for alumnae</a>
+        </article>
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="rose"></canvas><i>The leader</i></div>
+          <h3>Leading and giving back</h3>
+          <p>You sit at the table, run the company or write the cheques, and you want to pull the next woman up.</p>
+          <ul>
+            <li>Mentor the next generation</li>
+            <li>An executive circle of peers</li>
+            <li>A platform for your ideas and work</li>
+          </ul>
+          <a class="link" href="#membership">Executive membership</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--ivory);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What membership opens</p>
+        <h2>Five things the network <em>does for you</em></h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.2"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M2.5 19c.8-3.3 3-5 5.5-5s4.7 1.7 5.5 5M13.5 18.5c.5-2.4 1.8-3.8 3-3.8 1.9 0 3.4 1.4 4 3.8"/></svg></div>
+          <div><h3>Mentorship</h3><p>Matched with senior African women leaders who have walked the road you are on, for honest advice and real introductions.</p><a class="link" href="#mentorship" style="display:inline-block;margin-top:14px">Explore mentorship</a></div>
+        </article>
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></div>
+          <div><h3>Community</h3><p>A private Slack workspace with channels for wealth, career wins, MBA life and entrepreneurship, so you are never solving alone.</p><a class="link" href="#community" style="display:inline-block;margin-top:14px">Inside the Slack</a></div>
+        </article>
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg></div>
+          <div><h3>Events</h3><p>Live masterclasses, webinars and in-person gatherings on the topics members ask for, with speakers who work in African markets.</p></div>
+        </article>
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4M8.5 12h7M8.5 15.5h7"/></svg></div>
+          <div><h3>Resources</h3><p>Templates, guides and recordings built for MBA women, from negotiation playbooks to portfolio worksheets.</p></div>
+        </article>
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+          <div><h3>Opportunities</h3><p>Board seats, speaking slots, roles and partnerships shared first with members, by members.</p></div>
+        </article>
+        <article class="pillar">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.7 5.4 3.7 8.5s-1.2 5.9-3.7 8.5c-2.5-2.6-3.7-5.4-3.7-8.5s1.2-5.9 3.7-8.5z"/></svg></div>
+          <div><h3>A continental reach</h3><p>East, West and Southern Africa plus the diaspora, in one room. Find a co-founder, a client or the woman who already solved your problem.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="silk sec">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Our belief</p>
+        <p class="quote" style="margin-top:22px">“Structural opportunities for women, not symbolic gestures.”</p>
+        <p class="quote-by">Nosipho Dinwa · Founder</p>
+      </div>
+      <div class="glass" style="padding:clamp(28px,4vw,48px);display:grid;gap:18px">
+        <h3 style="font-size:2rem">Next on the calendar</h3>
+        <p style="color:var(--cocoa-soft)">Our live sessions are announced to members first. Join the newsletter or apply for membership to get the invitation.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn solid" href="#events">See events <span class="arr">→</span></a><a class="btn" href="#podcast">Listen to the podcast</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap news">
+      <div>
+        <p class="eyebrow">The newsletter</p>
+        <h2 style="margin-top:18px">Career, capital and the <em>continent</em>, in your inbox.</h2>
+      </div>
+      <div style="display:grid;gap:22px">
+        <p class="lede">Member stories, upcoming sessions and the opportunities worth your time. Written for MBA women, by MBA women.</p>
+        <div><a class="btn" href="#apply">Get on the list <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="view" data-view="about" hidden>
+  <div class="silk">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap" style="padding-block:clamp(64px,9vw,120px)">
+      <div class="glass hero-card" style="max-width:860px">
+        <p class="eyebrow">About us</p>
+        <h1 style="font-size:clamp(2.8rem,6vw,5.2rem)">The degree is the beginning. <span style="font-style:italic;color:var(--rose-deep)">The network is the multiplier.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">Women across Africa are earning MBAs in growing numbers. Too often the qualification arrives without the sponsorship, capital and connections that turn it into influence. MBA Women in Africa exists to close that gap.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap split" style="align-items:start">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Our mission</p>
+        <h2>A serious professional home for <em>African women</em> in business education.</h2>
+      </div>
+      <div style="display:grid;gap:20px;color:var(--cocoa-soft)">
+        <p>We are a pan-African community of more than 1,200 women in over 15 countries. Our lens is continental and our framing is MBA-specific: strategy, finance and leadership, applied to the markets we actually work in.</p>
+        <p>Membership is by application. That is a deliberate choice. It keeps the room focused, the conversations honest and the introductions valuable for everyone in it.</p>
+        <p>We are building towards an institution: a member platform, a mentorship programme, and in time a fund that invests in the women of this community.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">What we stand for</p><h2>Our values</h2></div>
+      <div class="values">
+        <div class="value"><span class="rule"></span><h3>Rooted</h3><p>Proudly African and pan-African. We build for East, West and Southern Africa and the diaspora, never one country alone.</p></div>
+        <div class="value"><span class="rule"></span><h3>Rising</h3><p>Ambitious without apology. We celebrate the promotion, the raise, the board seat and the first investment.</p></div>
+        <div class="value"><span class="rule"></span><h3>Relentless</h3><p>Practical over performative. Every programme has to move a member's career, business or wealth forward.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--sand)">
+    <div class="wrap split">
+      <div class="monogram" aria-hidden="true">
+        <div class="arch"><canvas class="silk-canvas" data-palette="rose"></canvas></div>
+        <div class="initials">ND</div>
+      </div>
+      <div class="glass founder-card">
+        <p class="eyebrow">Meet the founder</p>
+        <h2 style="font-size:clamp(2.4rem,4.4vw,3.6rem)">Nosipho <em>Dinwa</em></h2>
+        <span class="rule"></span>
+        <p style="color:var(--cocoa-soft)">Nosipho has spent more than fifteen years in learning, leadership development and hospitality, building programmes that help people grow, from front-line teams to senior leaders. Her career has taken her from Walt Disney World to national and global learning leadership roles.</p>
+        <p style="color:var(--cocoa-soft)">She founded MBA Women in Africa in 2025 while completing her own MBA, after seeing how much talent sat in lecture halls without the networks to match. She also leads mentorship across the continent as Director of Training, Mentorship and Education at the African Association of Women in Tourism and Hospitality.</p>
+        <ul class="creds">
+          <li>MBA candidate, UCT Graduate School of Business</li>
+          <li>Co-Chair, UCT GSB Women in Business</li>
+          <li>AAWTH executive committee</li>
+          <li>Hospitality faculty advisory boards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section class="view" data-view="membership" hidden>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow">Membership</p>
+        <h2>Choose the circle that <em>fits your season</em></h2>
+        <p class="lede">Every membership begins with an application. Many members have their employer cover the fee as professional development.</p>
+      </div>
+      <div class="tiers">
+        <article class="tier">
+          <p class="eyebrow">Explorer</p>
+          <h3>Join the conversation</h3>
+          <div class="price"><b>Free</b><span>always</span></div>
+          <p>For women considering or starting an MBA who want to find their people.</p>
+          <ul>
+            <li>Community newsletter</li>
+            <li>Open Slack channels</li>
+            <li>Public webinars and events</li>
+            <li>Podcast and Member Spotlight</li>
+            <li>Selected free resources</li>
+          </ul>
+          <a class="btn" href="#apply">Apply as Explorer</a>
+        </article>
+        <article class="tier feature">
+          <span class="flag">Most chosen</span>
+          <p class="eyebrow">Connect</p>
+          <h3>Grow with the network</h3>
+          <div class="price"><b>R2,999</b><span>per year</span></div>
+          <p>For candidates and graduates actively building their careers and wealth.</p>
+          <ul>
+            <li>Everything in Explorer</li>
+            <li>Full access to the member Slack</li>
+            <li>Full resource library and recordings</li>
+            <li>Monthly masterclass</li>
+            <li>Peer accountability circles</li>
+            <li>Priority event access</li>
+          </ul>
+          <a class="btn" href="#apply">Apply for Connect</a>
+        </article>
+        <article class="tier">
+          <p class="eyebrow">Executive</p>
+          <h3>Lead and be amplified</h3>
+          <div class="price"><b>R7,499</b><span>per year</span></div>
+          <p>For senior leaders, founders and investors ready to lead and give back.</p>
+          <ul>
+            <li>Everything in Connect</li>
+            <li>Mentorship matching</li>
+            <li>Executive circle</li>
+            <li>Speaking and board opportunities</li>
+            <li>Featured member profile</li>
+          </ul>
+          <a class="btn" href="#apply">Apply for Executive</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="apply-steps" style="background:var(--sand)">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">How to join</p><h2>Four steps to your <em>seat at the table</em></h2></div>
+      <div class="steps">
+        <div class="step"><h4>Apply</h4><p>Tell us about your MBA, your work and what you hope to gain and give.</p></div>
+        <div class="step"><h4>Review</h4><p>Our team reviews every application to keep the community focused and trusted.</p></div>
+        <div class="step"><h4>Welcome</h4><p>You receive your invitation, onboarding and access to your member spaces.</p></div>
+        <div class="step"><h4>Show up</h4><p>Join a masterclass, meet your circle and put your hand up for the Spotlight.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ MENTORSHIP ============ -->
+<section class="view" data-view="mentorship" hidden>
+  <div class="silk">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap hero-split" style="padding-block:clamp(64px,9vw,120px)">
+      <div class="glass hero-card">
+        <p class="eyebrow">Mentorship</p>
+        <h1 style="font-size:clamp(2.8rem,6vw,5.2rem)">Someone who has <span style="font-style:italic;color:var(--rose-deep)">walked your road.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">We match members with senior African women leaders for structured, confidential mentorship. It's not a coffee chat. It's a relationship with goals, a rhythm and a finish line.</p>
+        <div class="cta-row">
+          <a class="btn solid" href="#apply">Apply to be mentored <span class="arr">→</span></a>
+          <a class="btn" href="#mentor-join">Become a mentor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">How it works</p><h2>A mentorship cycle in <em>four movements</em></h2></div>
+      <div class="steps">
+        <div class="step"><h4>Profile</h4><p>Tell us where you are, where you want to go and what kind of guidance you need.</p></div>
+        <div class="step"><h4>Match</h4><p>We pair you with a mentor by industry, ambition and lived experience, not by algorithm alone.</p></div>
+        <div class="step"><h4>Meet</h4><p>Regular one-to-one sessions with clear goals agreed in your first conversation.</p></div>
+        <div class="step"><h4>Reflect</h4><p>Close the cycle with your insights and lessons, then pay it forward to the next woman.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--sand)">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Mentorship tracks</p><h2>Guidance for the <em>decision in front of you</em></h2></div>
+      <div class="aud">
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="blush"></canvas><i>Career</i></div>
+          <h3>The next role</h3>
+          <p>Promotions, pivots and negotiating what you are worth after the MBA.</p>
+        </article>
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="peach"></canvas><i>Venture</i></div>
+          <h3>The business</h3>
+          <p>Starting, funding and scaling a business, with founders and investors who have done it in African markets.</p>
+        </article>
+        <article class="aud-card">
+          <div class="swatch"><canvas class="silk-canvas" data-palette="rose"></canvas><i>Board</i></div>
+          <h3>The boardroom</h3>
+          <p>Preparing for non-executive roles, governance and the seat at the very top table.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="mentor-join">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Built on experience</p>
+        <p class="quote" style="margin-top:22px">“The fastest way up is a hand reaching back.”</p>
+        <p class="quote-by">The MBA Women in Africa mentorship promise</p>
+      </div>
+      <div class="glass" style="padding:clamp(28px,4vw,48px);display:grid;gap:18px">
+        <h3 style="font-size:2rem">Become a mentor</h3>
+        <p style="color:var(--cocoa-soft)">Our programme draws on mentorship design already rolled out across Africa by our founder. If you are a senior leader, founder or investor and want to pull the next woman up, we would be honoured to have you.</p>
+        <ul class="creds" style="margin:0">
+          <li>A few hours a month</li><li>One mentee per cycle</li><li>Matched with care</li>
+        </ul>
+        <div><a class="btn solid" href="#apply">Offer to mentor <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ COMMUNITY (SLACK) ============ -->
+<section class="view" data-view="community" hidden>
+  <div class="silk">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap" style="padding-block:clamp(64px,9vw,120px)">
+      <div class="glass hero-card" style="max-width:860px">
+        <p class="eyebrow">The community on Slack</p>
+        <h1 style="font-size:clamp(2.8rem,6vw,5.2rem)">The conversation <span style="font-style:italic;color:var(--rose-deep)">never closes.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">Between events, members meet in our private Slack workspace. Ask a question at 9pm, celebrate a win at 7am, and find the woman in Lagos, Nairobi or Windhoek who already has the answer.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Inside the workspace</p><h2>Channels for every <em>part of your ambition</em></h2></div>
+      <div class="channels">
+        <div class="channel"><span class="hash">#</span><div><h4>introductions</h4><p>Say hello, share your school and what you are building.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>wealth-and-investing</h4><p>Portfolios, property, pensions and the money questions we rarely ask out loud.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>career-wins</h4><p>Promotions, raises, board seats. Every win gets celebrated here.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>mba-life</h4><p>Assignments, exams, group work and surviving block week.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>entrepreneurship</h4><p>Founders swapping notes on clients, funding and growth.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>opportunities</h4><p>Roles, board seats, speaking slots and calls for applications.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>events</h4><p>Masterclass reminders, recordings and in-person meet-ups.</p></div></div>
+        <div class="channel"><span class="hash">#</span><div><h4>partner-offers</h4><p>Clearly labelled offers from partners we have chosen for members.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--sand)">
+    <div class="wrap split" style="align-items:start">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">How you get in</p>
+        <h2>Invitation <em>only.</em></h2>
+        <p class="lede">Your Slack invitation arrives with your welcome email once your membership application is approved. Explorer members join selected open channels; Connect and Executive members receive full access.</p>
+        <div><a class="btn solid" href="#apply">Apply for membership <span class="arr">→</span></a></div>
+      </div>
+      <div class="glass" style="padding:clamp(28px,4vw,48px);display:grid;gap:18px">
+        <h3 style="font-size:2rem">Our community agreement</h3>
+        <ul class="agree">
+          <li><b>What is shared here, stays here.</b> No screenshots outside the workspace.</li>
+          <li><b>Lead with generosity.</b> Answer the question you once needed answered.</li>
+          <li><b>Ask boldly.</b> There is no small question in a room of peers.</li>
+          <li><b>No unsolicited selling.</b> Offers belong in #partner-offers.</li>
+          <li><b>Respect every voice.</b> We are many countries, languages and paths.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section class="view" data-view="events" hidden>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Events</p>
+        <h2>Rooms where the <em>real conversations</em> happen</h2>
+        <p class="lede">Live masterclasses and webinars across time zones, plus in-person gatherings. New dates are announced to members first.</p>
+      </div>
+      <div class="events">
+        <article class="ev">
+          <div class="date"><b>22</b><span>Apr 2026</span></div>
+          <div><p class="kind">Webinar · 19:00 SAST · Virtual</p><h3>Women, Wealth &amp; the African Market</h3><p>From the boardroom to the portfolio: why African women must invest, capital market basics, and protecting your shares and assets.</p></div>
+          <span class="pill">Past event</span>
+        </article>
+        <article class="ev">
+          <div class="date"><b>May</b><span>2026</span></div>
+          <div><p class="kind">Podcast recording · Africa Month</p><h3>Capital Conversations</h3><p>A conversation on women-led venture capital and what funders look for in African women founders.</p></div>
+          <span class="pill">Recorded</span>
+        </article>
+        <article class="ev">
+          <div class="date"><b>May</b><span>2026</span></div>
+          <div><p class="kind">Fireside · Africa Month</p><h3>Rooted, Rising &amp; Relentless</h3><p>MBA women from Namibia, South Africa and Zimbabwe on pan-African sisterhood and the real cost of an MBA.</p></div>
+          <span class="pill">Recorded</span>
+        </article>
+      </div>
+      <div class="glass" style="margin-top:56px;padding:clamp(28px,4vw,48px);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+        <div><h3 style="font-size:2rem">Be first to hear about the next session</h3><p style="color:var(--cocoa-soft);margin-top:8px">Members receive every invitation before it goes public.</p></div>
+        <a class="btn solid" href="#apply">Apply for membership <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ SPOTLIGHT ============ -->
+<section class="view" data-view="spotlight" hidden>
+  <div class="silk">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap" style="padding-block:clamp(64px,9vw,120px)">
+      <div class="glass hero-card" style="max-width:820px">
+        <p class="eyebrow">Member Spotlight</p>
+        <h1 style="font-size:clamp(2.8rem,6vw,5rem)">Her story, <span style="font-style:italic;color:var(--rose-deep)">told with care.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">Long-form features on the women of this community: the work they lead, the decisions that shaped them, and what they would tell the women coming up behind them.</p>
+      </div>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap split" style="align-items:start">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Visibility is a <em>career asset.</em></h2>
+      </div>
+      <div style="display:grid;gap:20px;color:var(--cocoa-soft)">
+        <p>Every Spotlight is written as a full feature, published here and shared across our channels. Featured members receive a Spotlight badge to share on their own profiles.</p>
+        <p>We have featured alumnae who moved from marketing into broad business leadership, and candidates who serve on boards while building movements rooted in Ubuntu.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px"><a class="btn solid" href="#apply">Nominate yourself <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" style="background:var(--sand)">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">How features are made</p><h2>From nomination to <em>published</em></h2></div>
+      <div class="steps">
+        <div class="step"><h4>Nominate</h4><p>Put yourself or a fellow member forward with a short note about her story.</p></div>
+        <div class="step"><h4>Share</h4><p>Answer a set of questions about your journey, in your own words.</p></div>
+        <div class="step"><h4>Shape</h4><p>We write the feature and you approve every word before it goes live.</p></div>
+        <div class="step"><h4>Celebrate</h4><p>We publish, share and send you your Spotlight badge.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ PODCAST ============ -->
+<section class="view" data-view="podcast" hidden>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The podcast</p>
+        <h2>Conversations on <em>capital, ambition</em> and the continent</h2>
+        <p class="lede">Recorded during Africa Month 2026. Honest, practical and unmistakably ours.</p>
+      </div>
+      <div class="pods">
+        <article class="pod">
+          <div class="cover"><canvas class="silk-canvas" data-palette="peach"></canvas><span>Capital Conversations</span></div>
+          <div><p class="eyebrow">Series one</p><h3>Capital Conversations</h3><p>With Jill Curr, co-founder of MsFiT Ventures, a women-led venture capital firm funding female-led African businesses. What investors look for, and how to get in the room.</p></div>
+        </article>
+        <article class="pod">
+          <div class="cover"><canvas class="silk-canvas" data-palette="blush"></canvas><span>Rooted, Rising &amp; Relentless</span></div>
+          <div><p class="eyebrow">Fireside</p><h3>Rooted, Rising &amp; Relentless</h3><p>A fireside with MBA classmates on pan-African sisterhood, the real cost of an MBA, and navigating spaces that were not built for African women.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ PARTNER ============ -->
+<section class="view" data-view="partner" hidden>
+  <div class="silk">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap" style="padding-block:clamp(64px,9vw,120px)">
+      <div class="glass hero-card" style="max-width:860px">
+        <p class="eyebrow">Partner with us</p>
+        <h1 style="font-size:clamp(2.8rem,6vw,5rem)">Reach Africa's <span style="font-style:italic;color:var(--rose-deep)">rising women leaders.</span></h1>
+        <span class="rule"></span>
+        <p class="lede">A trusted, application-only audience of MBA candidates, graduates and executives in over 15 countries. We partner with brands that genuinely serve them.</p>
+      </div>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Ways to partner</p><h2>Placements, <em>clearly labelled</em> and carefully chosen</h2></div>
+      <div class="placements">
+        <div class="placement"><h4>Partner logo strip</h4><p>Your brand on the homepage beside the community you support.</p></div>
+        <div class="placement"><h4>Sponsored features</h4><p>Content cards that put your expertise in front of members.</p></div>
+        <div class="placement"><h4>Newsletter sponsorship</h4><p>A dedicated slot in the member newsletter.</p></div>
+        <div class="placement"><h4>Event sponsorship</h4><p>Present a masterclass, webinar or in-person gathering.</p></div>
+        <div class="placement"><h4>Member perks</h4><p>Offer members an exclusive benefit on our Partner Offers page.</p></div>
+        <div class="placement"><h4>Community partner posts</h4><p>Labelled announcements in our member spaces.</p></div>
+      </div>
+      <div class="glass" style="margin-top:56px;padding:clamp(28px,4vw,48px);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+        <div><h3 style="font-size:2rem">Request the media kit</h3><p style="color:var(--cocoa-soft);margin-top:8px">Rates, audience profile and available dates for the coming quarter.</p></div>
+        <a class="btn solid" href="#apply">Get in touch <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ APPLY ============ -->
+<section class="view" data-view="apply" hidden>
+  <div class="silk cta-band">
+    <canvas class="silk-canvas" data-palette="hero" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="glass cta-card">
+        <p class="eyebrow">Apply</p>
+        <h2>Your seat <em>is waiting.</em></h2>
+        <span class="rule"></span>
+        <p class="lede" style="margin-inline:auto">Applications for founding members are open. Reach out to the founder, Nosipho Dinwa, on LinkedIn and tell us about your MBA journey and what you hope to gain and give.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+          <a class="btn solid" href="https://www.linkedin.com/search/results/all/?keywords=MBA%20Women%20in%20Africa" target="_blank" rel="noopener">Apply via LinkedIn <span class="arr">→</span></a>
+          <a class="btn" href="#membership">Compare memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="logo" href="#home"><span class="l1">MBA Women in Africa</span><span class="l2">Learn · Lead · Invest</span></a>
+        <p>A pan-African professional home for women in business education, across East, West and Southern Africa and the diaspora.</p>
+      </div>
+      <div><h5>Community</h5><ul><li><a href="#about">About</a></li><li><a href="#membership">Membership</a></li><li><a href="#mentorship">Mentorship</a></li><li><a href="#community">Slack community</a></li><li><a href="#apply">Apply</a></li></ul></div>
+      <div><h5>Content</h5><ul><li><a href="#events">Events</a></li><li><a href="#spotlight">Member Spotlight</a></li><li><a href="#podcast">Podcast</a></li></ul></div>
+      <div><h5>Work with us</h5><ul><li><a href="#partner">Partner With Us</a></li><li><a href="#partner">Media kit</a></li></ul></div>
+    </div>
+    <div class="base"><span>© 2026 MBA Women in Africa</span><span>Rooted · Rising · Relentless</span></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ---- Routing between views (bare hash tokens) ----
+  var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.main a'));
+  var nav = document.getElementById('nav');
+  var menuBtn = document.getElementById('menuBtn');
+  var names = views.map(function (v) { return v.getAttribute('data-view'); });
+
+  function show(name, scroll) {
+    if (names.indexOf(name) === -1) name = 'home';
+    views.forEach(function (v) { v.hidden = v.getAttribute('data-view') !== name; });
+    navLinks.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + name) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    closeMenu();
+    paintAll();
+    if (scroll) window.scrollTo(0, 0);
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var name = a.getAttribute('href').slice(1);
+    if (names.indexOf(name) === -1) return;
+    e.preventDefault();
+    try { history.pushState(null, '', '#' + name); } catch (err) {}
+    show(name, true);
+  });
+  window.addEventListener('popstate', function () {
+    var h = location.hash.slice(1);
+    if (!h || names.indexOf(h) !== -1) show(h || 'home', true);
+  });
+
+  function closeMenu() { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', function () {
+    var open = !nav.classList.contains('open');
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+
+  // ---- Soft "silk" grounds: warm pastel light painted once per canvas ----
+  var palettes = {
+    hero:  { base: '#f1e6da', blobs: ['#f7e2cf', '#f4dcd5', '#fbf3ea', '#ead3c4', '#f6e6dd'] },
+    blush: { base: '#efd2ca', blobs: ['#f7e0d9', '#e6bdb3', '#fbeee8', '#dcaaa1', '#f3d6cc'] },
+    peach: { base: '#f3dcc6', blobs: ['#f9eadb', '#ecc8a8', '#fdf4ea', '#e6bb98', '#f6dfc9'] },
+    rose:  { base: '#dcb3ab', blobs: ['#e9c7bf', '#c99088', '#f2d9d2', '#bd8279', '#e4bdb4'] }
+  };
+  function seeded(seed) { return function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }; }
+  function paint(c, idx) {
+    var r = c.getBoundingClientRect();
+    if (!r.width || !r.height) return false;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = Math.round(r.width), h = Math.round(r.height);
+    if (c._w === w && c._h === h) return true;
+    c._w = w; c._h = h;
+    c.width = w * dpr; c.height = h * dpr;
+    var x = c.getContext('2d');
+    x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var p = palettes[c.getAttribute('data-palette')] || palettes.hero;
+    var rnd = seeded(idx * 97 + 13);
+    x.fillStyle = p.base; x.fillRect(0, 0, w, h);
+    // broad soft blooms of light
+    for (var i = 0; i < 9; i++) {
+      var cx = rnd() * w, cy = rnd() * h, rad = (0.35 + rnd() * 0.55) * Math.max(w, h);
+      var g = x.createRadialGradient(cx, cy, 0, cx, cy, rad);
+      var col = p.blobs[i % p.blobs.length];
+      g.addColorStop(0, col); g.addColorStop(1, col + '00');
+      x.globalAlpha = 0.55 + rnd() * 0.35;
+      x.fillStyle = g; x.fillRect(0, 0, w, h);
+    }
+    // silk folds: long diagonal sheens
+    x.globalAlpha = 1;
+    for (var k = 0; k < 5; k++) {
+      var ox = (rnd() - 0.2) * w, ang = -0.5 + rnd() * 0.3;
+      x.save(); x.translate(ox, h / 2); x.rotate(ang);
+      var bw = (0.08 + rnd() * 0.18) * w;
+      var lg = x.createLinearGradient(-bw, 0, bw, 0);
+      lg.addColorStop(0, 'rgba(255,255,255,0)'); lg.addColorStop(.5, 'rgba(255,255,255,' + (0.18 + rnd() * 0.22) + ')'); lg.addColorStop(1, 'rgba(255,255,255,0)');
+      x.fillStyle = lg; x.fillRect(-bw, -h * 1.5, bw * 2, h * 3);
+      x.restore();
+    }
+    // fine grain for a photographic feel
+    var img = x.getImageData(0, 0, c.width, c.height), d = img.data;
+    for (var j = 0; j < d.length; j += 4) { var n = (Math.random() - 0.5) * 10; d[j] += n; d[j + 1] += n; d[j + 2] += n; }
+    x.putImageData(img, 0, 0);
+    return true;
+  }
+  var canvases = Array.prototype.slice.call(document.querySelectorAll('canvas.silk-canvas'));
+  function paintAll() { canvases.forEach(function (c, i) { paint(c, i); }); }
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(paintAll, 160); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(paintAll);
+
+  show(location.hash.slice(1) || 'home', false);
+})();
+</script>
+
+</body>
+</html>
